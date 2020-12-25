@@ -27,10 +27,10 @@ camera_fb_t *fb = NULL;
 const int pixel_size = sizeof(uint16_t);
 const int screen_width = 240;
 const int screen_height = 240;
-const int screen_left = 40;
+const int screen_left = 40 * pixel_size;
 const int camera_width = 320;
 
-EXT_RAM_ATTR uint16_t colors[240*2];
+EXT_RAM_ATTR uint16_t colors[240];
 
 void CamToScreen(TFT_t *dev, int width, int height)
 {
